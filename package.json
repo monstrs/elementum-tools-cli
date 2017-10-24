@@ -1,0 +1,59 @@
+{
+  "name": "elementum-tools-cli",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/monstrs/elementum-tools-cli.git"
+  },
+  "author": "Andrey Linko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monstrs/elementum-tools-cli/issues"
+  },
+  "homepage": "https://github.com/monstrs/elementum-tools-cli#readme",
+  "main": "lib",
+  "scripts": {
+    "lint": "eslint src -f table",
+    "build": "rimraf lib && babel -d lib src",
+    "examples": "node -r babel-register src/index.js examples/index.js -o build/index.css",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^7.0.0-beta.3",
+    "babel-loader": "^7.1.2",
+    "commander": "^2.11.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "jss-camel-case": "^6.0.0",
+    "jss-global": "^3.0.0",
+    "jss-loader": "^1.0.0",
+    "jss-nested": "^6.0.1",
+    "memory-fs": "^0.4.1",
+    "postcss-loader": "^2.0.8",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.5.4",
+    "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^7.0.0-beta.3",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-env": "^7.0.0-beta.3",
+    "babel-preset-stage-0": "^7.0.0-beta.3",
+    "babel-register": "^7.0.0-beta.3",
+    "elementum": "^0.4.1",
+    "elementum-tools": "^0.4.1",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.2.0"
+  },
+  "peerDependencies": {
+    "elementum": "^0.4.1",
+    "elementum-tools": "^0.4.1"
+  },
+  "bin": {
+    "elementum": "./bin/elementum.js"
+  }
+}
